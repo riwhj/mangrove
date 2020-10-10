@@ -19,14 +19,18 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 
 import HomeScreen from './pages/HomeScreen';
-import SettingsScreen from './pages/SettingsScreen';
-import DetailsScreen from './pages/DetailsScreen';
-import ProfileScreen from './pages/ProfileScreen';
+import StaffScreen from './pages/StaffScreen';
+import BookingPackagesScreen from './pages/BookingPackagesScreen';
+import CustomerScreen from './pages/CustomerScreen';
+import PackagesScreen from './pages/PackagesScreen';
+
+
+
 const HomeStack = createStackNavigator(
   {
     //Defination of Navigaton from home screen
     Home: { screen: HomeScreen },
-    Details: { screen: DetailsScreen },
+    Customer: { screen: CustomerScreen },
   },
   {
     defaultNavigationOptions: {
@@ -40,12 +44,13 @@ const HomeStack = createStackNavigator(
     },
   }
 );
-const SettingsStack = createStackNavigator(
+
+const  StaffStack = createStackNavigator(
   {
     //Defination of Navigaton from setting screen
-    Settings: { screen: SettingsScreen },
-    Details: { screen: DetailsScreen },
-    Profile: { screen: ProfileScreen },
+    Staff: { screen:  StaffScreen },
+    Customer: { screen: CustomerScreen },
+    Packages: { screen: PackagesScreen },
   },
   {
     defaultNavigationOptions: {
@@ -54,42 +59,79 @@ const SettingsStack = createStackNavigator(
         backgroundColor: '#42f44b',
       },
       headerTintColor: '#FFFFFF',
-      title: 'Settings',
+      title: ' Staff',
       //Header title
     },
   }
 );
-const App = createBottomTabNavigator(
+const BookingPackagesStack = createStackNavigator(
   {
-    Staff: { screen: HomeStack },
-    Settings: { screen: SettingsStack },
+    //Defination of Navigaton from setting screen
+    BookingPackages: { screen: BookingPackagesScreen },
+    Customer: { screen: CustomerScreen },
+    Packages: { screen: PackagesScreen },
   },
   {
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, horizontal, tintColor }) => {
-        const { routeName } = navigation.state;
-        let IconComponent = Ionicons;
-        let iconName;
-        if (routeName === 'Staff') {
-          iconName = `ios-information-circle${focused ?
-            '' : '-outline'
-          }`;
-        } else if (routeName === 'Settings') {
-          iconName = `ios-checkmark-circle${focused ?
-            '' : '-outline'
-          }`;
-        }
-        return <IconComponent
-                 name={iconName}
-                 size={25}
-                 color={tintColor}
-               />;
+    defaultNavigationOptions: {
+      //Header customization of the perticular Screen
+      headerStyle: {
+        backgroundColor: '#42f44b',
       },
-    }),
-    tabBarOptions: {
-      activeTintColor: '#42f44b',
-      inactiveTintColor: 'gray',
+      headerTintColor: '#FFFFFF',
+      title: 'Packages',
+      //Header title
     },
   }
+);
+
+const CustomerStack = createStackNavigator(
+  {
+    //Defination of Navigaton from setting screen
+    Customer: { screen: CustomerScreen },
+    Packages: { screen: PackagesScreen },
+  },
+  {
+    defaultNavigationOptions: {
+      //Header customization of the perticular Screen
+      headerStyle: {
+        backgroundColor: '#42f44b',
+      },
+      headerTintColor: '#FFFFFF',
+      title: 'Customer',
+      //Header title
+    },
+  }
+);
+
+const PackagesStack = createStackNavigator(
+  {
+    //Defination of Navigaton from setting screen
+  
+    Customer: { screen: CustomerScreen },
+    Packages: { screen: PackagesScreen },
+  },
+  {
+    defaultNavigationOptions: {
+      //Header customization of the perticular Screen
+      headerStyle: {
+        backgroundColor: '#42f44b',
+      },
+      headerTintColor: '#FFFFFF',
+      title: 'Packages',
+      //Header title
+    },
+  }
+);
+
+
+
+const App = createBottomTabNavigator(
+  {
+    Home: { screen: HomeStack },
+    Staff: { screen: StaffStack }, 
+    Customer: { screen: CustomerStack },
+    Packages: { screen: PackagesStack },
+    BookingPackages: { screen: BookingPackagesStack },
+  },
 );
 export default createAppContainer(App);

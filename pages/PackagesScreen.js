@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 //import all the basic component we have used
 
-export default class DetailsScreen extends React.Component {
-  //Detail Screen to show from any Open detail button
+export default class PackagestScreen extends React.Component {
+  //Profile Screen to show from Open profile button
   render() {
     return (
       <View
@@ -19,7 +19,7 @@ export default class DetailsScreen extends React.Component {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
-        <Text>Details!</Text>
+        <Text>Profile!</Text>
       </View>
     );
   }

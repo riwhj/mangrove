@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 //import all the basic component we have used
 
-export default class SettingsScreen extends React.Component {
-  //Setting Screen to show in Setting Option
+export default class BookingPackagesScreen extends React.Component {
+  //Home Screen to show in Home Option
   render() {
     return (
       <View
@@ -23,9 +23,7 @@ export default class SettingsScreen extends React.Component {
           style={{
             marginTop: 50,
             fontSize: 25
-          }}>
-          Setting!
-        </Text>
+          }}>MANGROVE</Text>
         <View
           style={{
             flex: 1,
@@ -35,23 +33,16 @@ export default class SettingsScreen extends React.Component {
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => this.props.navigation.navigate('Home')
+              () => this.props.navigation.navigate('Settings')
             }>
-            <Text>Go to Home Tab</Text>
+            <Text>Go to settng Tab</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
               () => this.props.navigation.navigate('Details')
             }>
-            <Text>Open Detail Screen</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => this.props.navigation.navigate('Profile')
-            }>
-            <Text>Open Profile Screen</Text>
+            <Text>Open Details Screen</Text>
           </TouchableOpacity>
         </View>
       </View>
