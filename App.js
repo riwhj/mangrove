@@ -42,7 +42,7 @@ const HomeStack = createStackNavigator(
         backgroundColor: '#2F4F4F',
       },
       headerTintColor: '#FFFFFF',
-      title: 'MANGROVE',
+      title: 'Home',
       //Header title
     },
   }
@@ -196,7 +196,7 @@ const App = createBottomTabNavigator(
     BookingPackages: { screen: BookingPackagesStack },
     Search: { screen: SearchStack },
     conclution: { screen: conclutionStack },
-    Search: { screen: SearchStack },
+    Scanner: { screen: ScannerStack },
     
   },
   {

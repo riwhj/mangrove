@@ -23,7 +23,7 @@ export default class SettingScreen extends Component {
   }
 
   componentDidMount() {
-    return fetch('http://172.16.29.89/mangrove/DB/package.php')
+    return fetch('http://172.16.156.124/mangrove/DB/package.php')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({data: responseJson});
@@ -66,6 +66,7 @@ export default class SettingScreen extends Component {
                     <Text style={{fontSize: 25, marginTop: 10, marginLeft: 50}}>
                     package
                     </Text>
+                    <Image source={require('C:/xampp/htdocs/mangrove/PackagePhoto/Lunch.jpg')} />
                     <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
                     package: {item.PName}
                     </Text>

@@ -23,7 +23,7 @@ export default class SettingScreen extends Component {
   }
 
   componentDidMount() {
-    return fetch('http://172.16.29.89/mangrove/DB/staff.php')
+    return fetch('http://172.16.156.124/mangrove/DB/staff.php')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({data: responseJson});

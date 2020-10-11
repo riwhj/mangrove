@@ -101,24 +101,16 @@ export default class Borrow extends Component {
                 color: '#2F4F4F',
               }}>
               {' '}
-              จำนวนจอง :{' '}
+              Packages :{' '}
             </Text>
             <Picker
               selectedValue={this.state.selectedLabel}
               onValueChange={this.Show.bind()}>
-              <Picker.Item label="1" value="1 "></Picker.Item>
-              <Picker.Item label="2" value="2 "></Picker.Item>
-              <Picker.Item label="3" value="3 "></Picker.Item>
-              <Picker.Item label="4" value="4 "></Picker.Item>
-              <Picker.Item label="5" value="5 "></Picker.Item>
-              <Picker.Item label="6" value="6 "></Picker.Item>
-              <Picker.Item label="7" value="3 "></Picker.Item>
-              <Picker.Item label="8" value="4 "></Picker.Item>
-              <Picker.Item label="9" value="5 "></Picker.Item>
-              <Picker.Item label="10" value="6 "></Picker.Item>
-              <Picker.Item label="11" value="4 "></Picker.Item>
-              <Picker.Item label="12" value="5 "></Picker.Item>
-              <Picker.Item label="13" value="6 "></Picker.Item>
+                 <Picker.Item label="Cloose" value="Cloose "></Picker.Item>
+              <Picker.Item label="Garden tour" value="Garden tour "></Picker.Item>
+              <Picker.Item label="Boat tour" value="Boat tour "></Picker.Item>
+              <Picker.Item label="Lunch" value="Lunch "></Picker.Item>
+              <Picker.Item label="Dinner" value="Dinner "></Picker.Item>
             </Picker>
           </View>
 
@@ -127,7 +119,18 @@ export default class Borrow extends Component {
               {width: '95%', borderRadius: 30, margin: 10, marginTop: 20},
             ]}>
             <Button
-              title="ตกลง"
+              title="submit"
+              color="#2F4F4F"
+              onPress={() => navigation.navigate('')}
+            />
+          </View>
+
+          <View
+            style={[
+              {width: '95%', borderRadius: 30, margin: 10, marginTop: 20},
+            ]}>
+            <Button
+              title="edit"
               color="#2F4F4F"
               onPress={() => navigation.navigate('')}
             />
