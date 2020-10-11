@@ -23,7 +23,7 @@ export default class SettingScreen extends Component {
   }
 
   componentDidMount() {
-    return fetch('http://172.16.29.89/mangrove/DB/staff.php')
+    return fetch('http://172.16.29.89/mangrove/DB/conclution.php')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({data: responseJson});
@@ -64,22 +64,28 @@ export default class SettingScreen extends Component {
                       color: '#5e3881',
                     }}>
                     <Text style={{fontSize: 25, marginTop: 10, marginLeft: 50}}>
-                    Staff
-                    </Text>
-                    <Image source={require('C:/xampp/htdocs/mangrove/StaffsPhoto/7502.jpg')} />
-                    <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
-                    StaffID: {item.SID}
+                    conclution
                     </Text>
                     <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
-                    StaffName: {item.SName}
+                    customerID: {item.CID}
                     </Text>
                     <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
-                    Telephone: {item.STelephone}
+                    GTour: {item.GTour}
                     </Text>
-                    {/* <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
-                      sex: {item.CSex}
-                    </Text>   */}
+                    <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
+                    BTour: {item.BTour}
+                    </Text>
+                    <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
+                    Lunch: {item.Lunch}
+                    </Text>  
+                    <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
+                    Dinner: {item.Dinner}
+                    </Text>
+                    <Text style={{fontSize: 16, marginTop: 10, marginLeft: 50}}>
+                    Date: {item.Date}
+                    </Text>
                   </View>
+                  
                 )}
               />
             </View>
