@@ -158,7 +158,7 @@ export default class extends Component {
           </Swiper>
 
           <View style={styles.container}>
-            <Swiper
+            {/* <Swiper
               style={styles.wrapper}
               height={200}
               horizontal={false}
@@ -172,7 +172,7 @@ export default class extends Component {
               <View style={styles.slide3}>
                 <Text style={styles.text}>And simple</Text>
               </View>
-            </Swiper>
+            </Swiper> */}
 
             {/* <Swiper
               style={styles.wrapper}
